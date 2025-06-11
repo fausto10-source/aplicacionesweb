@@ -1,0 +1,241 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bomba Project - Ropa</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color: #f9f9f9; }
+
+    header {
+      position: relative;
+      background-image: url(image.png);
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(8px);
+    }
+
+    .menu {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu > li > a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #222;
+      list-style: none;
+      padding: 10px 0;
+      min-width: 160px;
+    }
+
+    .submenu li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 20px;
+      display: block;
+    }
+
+    .submenu li a:hover {
+      background-color: #333;
+    }
+
+    .menu li:hover .submenu {
+      display: block;
+    }
+
+    .icons {
+      display: flex;
+      gap: 30px;
+    }
+
+    .icons img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    h1.brand {
+      text-align: center;
+      font-size: 60px;
+      padding-bottom: 40px;
+      font-family: 'Georgia', serif;
+      color: #f4f4f4;
+      font-weight: 300;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 120px 40px 40px 40px;
+    }
+
+    .item {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .item:hover {
+      transform: scale(1.03);
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .item p {
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .about {
+      margin-top: 20px;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 18px;
+      color: #333;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    footer {
+      background-color: #333;
+      color: #e0e0e0;
+      padding: 20px;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 14px;
+    }
+
+    footer a { color: #00ff00; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="#">Men</a>
+          <ul class="submenu">
+            <li><a href="#">Remeras</a></li>
+            <li><a href="#">Chombas</a></li>
+            <li><a href="#">Pantalones</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Women</a>
+          <ul class="submenu">
+            <li><a href="#">Remeras</a></li>
+            <li><a href="#">Chombas</a></li>
+            <li><a href="#">Pantalones</a></li>
+            <li><a href="#">Trajes de baño</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Sale</a>
+          <ul class="submenu">
+            <li><a href="#">Remeras</a></li>
+            <li><a href="#">Trajes de baño</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="icons">
+        <img src="lupa.png" alt="Buscar">
+        <img src="usuario.png" alt="Usuario">
+        <img src="carrito.png" alt="Carrito de compras">
+      </div>
+    </nav>
+    <h1 class="brand">Donde el estilo empieza con vos</h1>
+  </header>
+
+  <section class="galeria">
+    <div class="item">
+      <img src="modelo1.png" alt="Modelo 1">
+      <p>Remera oversize</p>
+    </div>
+    <div class="item">
+      <img src="modelo2.png" alt="Modelo 2">
+      <p>Campera ecocuero</p>
+    </div>
+    <div class="item">
+      <img src="modelo3.png" alt="Modelo 3">
+      <p>Bikini</p>
+    </div>
+    <div class="item">
+      <img src="modelo4.png" alt="Modelo 4">
+      <p>Pantalon relaxed fit</p>
+    </div>
+    <div class="item">
+      <img src="modelo5.png" alt="Modelo 5">
+      <p>Camisa urbana</p>
+    </div>
+    <div class="item">
+      <img src="modelo6.png" alt="Modelo 6">
+      <p>Rmera shaka</p>
+    </div>
+    <div class="item">
+      <img src="modelo7.png" alt="Modelo 7">
+      <p>buzo playa</p>
+    </div>
+    <div class="item">
+      <img src="f76a8c7e-8428-4fb3-b989-449c95713146.png" alt="Modelo 8">
+      <p>Buzo clasic</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <p>En Bomba Project creemos que el estilo no se impone, se expresa. Diseñamos prendas para quienes entienden que la moda no es apariencia, sino una forma de mostrarse al mundo con autenticidad. Nuestra misión es vestir personas reales con personalidad única. Porque el estilo, lo definís vos.</p>
+  </section>
+
+  <footer>
+    <p>Ubicación: Calle Ficticia 123, Buenos Aires</p>
+    <p>Email: contacto@bombaproject.com</p>
+    <p>Teléfono: <a href="https://wa.me/5491123456789" target="_blank">+54 9 11 2345-6789</a></p>
+  </footer>
+</body>
+</html>
